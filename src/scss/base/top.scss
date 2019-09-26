@@ -1,0 +1,65 @@
+.home__top{
+    display: flex;
+    height: 3.43rem;
+    margin: 2.5rem 0 2.63rem 3.43rem;
+  }
+  .search{
+    @include center;
+    border-radius: 1.71rem  ;
+    height: 3.43rem;
+    width: 36.88rem;
+  }
+  .search--bg{
+    background: #f5f6f8;
+  }
+  .search__icon{
+    margin: 0 1.56rem;
+    font-size: 1.6rem;
+  }
+  .search__input{
+    border : none;
+    font-size: 1.2rem;
+    outline: none;
+    width: 25rem;
+  }
+  .notification{
+    margin: auto 3.25rem auto 13.13rem;
+    font-size: 1.88rem;
+    
+  }
+  .user{
+    display: flex;
+  
+  }
+  .user__avatar{
+    height: 100%;
+    width: 3,5rem;
+  }
+  .user__name{
+    font-size: 1rem;
+    font-weight: bold;
+    margin: auto 0 auto 1.88rem;
+  }
+  @include mQ(720px){
+    .home__top{
+      margin: 20rem 5rem 5rem 5rem ;
+    }
+    .user{
+      display: none;
+    }
+    .notification{
+      display: none;
+    }
+    .search{
+      height: 8rem  ;
+      width: 80rem;
+      border-radius: 5rem;
+    }
+    .search__icon{
+      font-size: 3rem;
+    }
+    .search__input{
+      font-size: 2.5rem;
+    }
+ 
+  }

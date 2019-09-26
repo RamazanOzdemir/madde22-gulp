@@ -1,0 +1,269 @@
+.home__midle{
+  display: flex;
+  margin: 0 0 0 3.43rem;
+  height: 29.5rem;
+}
+.explanation{
+  display: flex;
+  background: #f5f6f8;
+  height: 14.38rem;
+  width: 46.56rem;
+  border-radius: 2.3rem;
+}
+.explanation__tetx{
+  margin : 3.13rem 0 3.13rem 2.38rem;
+  width: 30.94rem;
+}
+.text__header{
+  margin: 0;
+  font-size: 1.31rem;
+}
+.text__comment{
+  font-size: 1.1rem;
+  margin: 1.2rem 0;
+}
+.text__link{
+  font-size: 1rem;
+  color : $orange;
+  text-decoration: none;
+}
+.explanation__symbol{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 9.81rem;
+  width: 5rem;
+  margin: 3.13rem 1rem 3.13rem 0;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  
+}
+.explanation__symbol--orange{
+  background: $orange;
+}
+.explanation__symbol--blue{
+  background: $blue;
+}
+.woman{
+  height: 29.5rem;
+  width: 20.63rem;
+  margin: 0 0 0 3.15rem;
+}
+
+.calendar{
+  height: 9rem;
+  width: 46.56rem;
+  margin-top: 3.13rem ;
+}
+.calendar__option{
+  display: flex;
+  align-content: flex-start;
+  height: 4rem;
+}
+.option__date{
+  height: 2rem;
+  width: 8.75rem;
+  text-align: center;
+  font-weight: bold;
+}
+.option__button{
+  @include center;
+  height: 2rem;
+  width: 2.4rem;
+  text-align: center;
+  padding: auto;
+  background: $orange;
+  border-width: 0px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+}
+.option__button--left{
+  border-radius: 1rem 0 0 1rem;
+}
+.option__button--right{
+  border-radius: 0 1rem 1rem 0;
+}
+.option__dropdown{
+  position: relative;
+  width: 7.25rem;
+  margin-left: 26.25rem;
+
+}
+.dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 2rem;
+  font-size: 1rem;
+  width: 7.25rem;
+  background: #fff;
+  border: 1.5px solid #a4abaf;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.dropdown__content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  font-size: 1rem;
+  min-width: 7.25rem;
+  padding: 0;
+  margin-top:0; 
+  z-index: 1;
+}
+.dropdown__content a {
+  color: black; 
+  text-decoration: none;
+  display: block;
+}
+.dropdown__content a:hover {
+  font-weight: bold;
+}
+.option__dropdown:hover .dropdown__content {
+  display: block;
+}
+
+.calendar__progress{
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  border-color: #555;
+}
+.progress{
+  display: flex;
+  justify-content: space-around;
+  height: 5rem;
+  width: 38rem;
+  color : #555;
+}
+.progress__date{
+  margin-top: 0.5rem;
+  height: 4rem;
+  background: #fff;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+}
+.progress__date--disabled{
+  margin-top: 0.5rem;
+  height: 4rem;
+  background: #fff;
+  text-align: center;
+  outline: none;
+  cursor: not-allowed;
+  color : #ccc;
+}
+.progress__button{
+  height: 2rem;
+  width: 7.25rem;
+  background: #fff;
+  border: 1.5px solid #a4abaf;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1.45rem;
+  outline: none;
+}
+
+/*mobile*/
+
+@include mQ(720px){
+  .home__midle{
+    flex-direction: column;
+    margin: 0;
+    height: 90rem;
+  }
+  .explanation{
+    width: 80rem;
+    height: 40rem;
+    margin: 5rem;
+  }
+  .explanation__tetx{
+    margin : 3.13rem 0 3.13rem 2.38rem;
+    width: 50rem;
+  }
+  .text__header{
+    font-size: 4.5rem;
+  }
+  .text__comment,.text__link{
+    font-size: 3.2rem;
+  }
+  .explanation__symbol{
+    height: 25rem;
+    width: 12rem;
+    font-size: 3rem;
+    border-radius: 3rem;
+  }
+  .woman{
+    display: none;
+  }
+  .calendar{
+    height: 45rem;
+    width: 80rem;
+    margin: 5rem ;
+  }
+  .calendar__option{
+    height: 14rem;
+  }
+  .option__date{
+    height: 6rem;
+    width: 45rem;
+    font-size: 4rem;
+  }
+  .option__button{
+    height: 5rem;
+    width: 8rem;
+    font-size: 4rem;
+  }
+  .option__button--left{
+    border-radius: 3rem 0 0 3rem;
+  }
+  .option__button--right{
+    border-radius: 0 3rem 3rem 0;
+  }
+  .option__dropdown{
+    width: 20rem;
+    margin-left: 12rem;
+
+  }
+  .dropbtn {
+    height: 6rem;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 20rem;
+    border-radius: 3rem;
+  }
+  .dropdown__content {
+    font-size: 3rem;
+    min-width: 20rem;
+  }
+  .calendar__progress{
+    height: 20rem;
+
+  }
+  .progress{
+    height: 16rem;
+    width: 60rem;
+  }
+  .progress__date{
+    font-size: 4.2rem;
+    height: 16rem;
+    font-weight: bold;
+  }
+  .progress__date--disabled{
+    height: 16rem;
+    font-size: 4.2rem;
+  }
+  .progress__button{
+    height: 6rem;
+    width: 20rem;
+    font-size: 3rem;
+    border-radius: 3rem;
+  }
+}

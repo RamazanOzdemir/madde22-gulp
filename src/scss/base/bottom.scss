@@ -1,0 +1,290 @@
+@import './mixins.scss';
+
+.home__bottom{
+    display: flex;
+    margin: 0rem 0 0 3.43rem;
+    height: 17.06rem;
+  }
+  .bottom__img{
+    position: relative;
+    height: 17.06rem;
+    width: 22.5rem;
+    margin: 0 2rem 0 0;
+
+  }
+  .bottom__men{
+    position: absolute;
+    height: 17.06rem;
+    width: 10rem;
+    top:0;
+    left:0;
+    margin: 0 2rem 0 0;
+
+  }
+  .bottom__arm{
+    position: absolute;
+    height: 17.06rem;
+    width: 10rem;
+    top:0;
+    left:0;
+    margin: 0 2rem 0 0;
+    animation-name: arm-move;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .bottom__ball{
+    position: absolute;
+    height: 17.06rem;
+    width: 10rem;
+    top:0;
+    left:0;
+    margin: 0 2rem 0 0;
+    animation-name: ball-move; 
+    animation-duration:  4s;
+    animation-timing-function:  ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .bottom__left{
+    position: absolute;
+    top: 0;
+    left: 2.13rem;
+    height: 17.06rem;
+    width: 10rem;
+  }
+  .left__header{
+    margin-top: 3.43rem;
+  }
+  .left__list{
+    margin-top: 2.38rem;
+    text-decoration: none;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1rem
+  }
+  .left__check{
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem 0.3rem 0;
+    color: $orange;
+  }
+  
+  .left__list li:hover .left__check{
+    
+    animation-name: turn;
+    animation-duration: 2s;
+  }
+  .bottom__img:hover .bottom__ball{
+    animation-name: ball-fall;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+  .bottom__img:hover .bottom__arm{
+    animation: none;
+  }
+  @keyframes turn {
+    from {transform: rotateX(180deg)};
+    to {transform: rotateX(180deg);}
+  }
+  @keyframes arm-move{
+    25%{transform: rotate(-6deg);
+        transform: translateX(0.4rem);
+      }
+    50%{transform: rotate(4deg);}
+    75%{transform: rotate(-6deg);
+        transform: translateX(0.4rem);
+      }
+    100%{transform: rotate(0deg);}
+  
+  }
+  @keyframes ball-move{
+    0%{transform: translate(0.6rem,-1.1rem);}
+    25%{transform: translate(-0.6rem,1.1rem);}
+    50%{transform: translate(0.6rem,-1.1rem);}
+    75%{transform: translate(-0.6rem,1.1rem);}
+    100%{transform: translate(0.6rem,-1.1rem);}
+  }
+  @keyframes ball-fall{
+    15%{transform: translateY(13rem);}
+    25%{transform: translate(1rem,8rem);}
+    35%{transform: translate(3rem,13rem);}
+    45%{transform: translate(4rem,10rem);}
+    60%{transform: translate(5rem,13rem);}
+    70%{transform: translate(6rem,12rem);}
+    80%{transform: translate(7rem,13rem);}
+    100%{transform: translate(8rem,13rem);}
+  }
+
+  .bottom__right{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    top: 0;
+    left: 10.38rem;
+    height: 17.06rem;
+    width: 12rem;
+    color: #fff;
+  }
+  .progressBar{
+    position: relative;
+    height: 0.5rem;
+    width: 10.38rem;
+    background: #3b3c40;
+    border-radius: 0.25rem;
+  }
+  .percent{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 0.5rem;
+    width: 0;
+    background: $yellow;
+    border-radius: 0.25rem;
+    transition: width 2s;
+  }
+  .right__option{
+    display: flex;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  .right__option--active{
+    color: $backgroundColor;
+    padding: 0;
+    margin: 0 1rem;
+    cursor: pointer;
+  
+     
+  }
+  .right__option--not{
+    color: $grey;
+    padding: 0;
+    margin: 0 1rem;
+    cursor: pointer;
+  }
+  .bottom__start{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-end;
+    border: 1px solid $grey;
+    border-width: 1px 0 0 0 ;
+    width: 20.63rem;
+    margin: 3.06rem 0 0 1rem ;
+  }
+  .start__header{
+    font-size: 1.6rem;
+    margin: 2.32rem auto 0 0;
+  }
+  .start__text{
+    font-size: 1.2rem;
+    color: $grey;
+    margin: 1.4rem auto 1.6rem 0;
+  }
+  .start__btn{
+    height: 3.43rem;
+    width: 10.75rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: auto;
+    background: $orange;
+    outline: none;
+    color: #fff;
+    border:none;
+    border-radius: 1.71rem;
+    cursor: pointer;
+  }
+  /*mobile*/
+  
+    @include mQ(720px){
+      .home__bottom{
+        flex-direction: column;
+        width: 80rem;
+      }
+      .bottom__img{
+        height: 55rem; 
+        width: 70rem;
+        margin: 5rem auto;
+      }
+      .bottom__men{
+        height: 55rem;
+        width: 32rem;
+        margin: 5rem auto;
+      }
+      .bottom__arm{
+        height: 55rem;
+        width: 32rem;
+        margin: 5rem auto;
+      }
+      .bottom__ball{
+        height: 55rem;
+        width: 32rem;
+        margin: 5rem auto; 
+      }
+      .bottom__left{
+        left: 5rem;
+        height: 45rem;
+        width: 40rem;
+
+      }
+      .left__header{
+        margin-top: 14rem;
+        font-size: 5rem;
+      }
+      .left__list{
+        font-size: 4rem
+      }
+      .left__check{
+        font-size: 1em;
+      }
+      
+      .bottom__right{
+        left: 30rem;
+        top:10rem;
+        height: 45rem;
+        width: 40rem;
+        font-size: 3.5rem;
+      }
+      .progressBar{
+        height: 2rem;
+        width: 30rem;
+        border-radius: 2rem;
+      }
+      .percent{
+        height: 2rem;
+        border-radius: 2rem;
+      }
+
+      .bottom__start{
+        align-content: center;
+        border: 3px solid $grey;
+        border-width: 3px 0 0 0 ;
+        width: 85rem;
+        margin: 3.06rem 0 0 1rem ;
+      }
+      .start__header{
+        font-size: 6rem;
+      }
+      .start__text{
+        font-size: 4rem;
+       
+      }
+      .start__btn{
+        height: 12rem;
+        width: 40rem;
+        font-size: 6rem;
+        border-radius: 6rem;
+      }
+      @keyframes ball-fall{
+        15%{transform: translateY(40rem);}
+        25%{transform: translate(3rem,32rem);}
+        35%{transform: translate(9rem,40rem);}
+        45%{transform: translate(12rem,35rem);}
+        60%{transform: translate(15rem,40rem);}
+        70%{transform: translate(18rem,38rem);}
+        80%{transform: translate(21rem,40rem);}
+        100%{transform: translate(24rem,40rem);}
+      }
+    }

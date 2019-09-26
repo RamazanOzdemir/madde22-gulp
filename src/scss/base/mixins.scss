@@ -1,0 +1,11 @@
+@mixin mQ($arg) {
+    @media screen and (max-width: $arg) {
+        @content;
+    }
+}
+
+@mixin center {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

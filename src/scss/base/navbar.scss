@@ -1,0 +1,154 @@
+.navbar{
+    display: flex;
+    flex-direction: column;
+    width: 9.37rem;
+    height: 59.37rem;
+    border-radius: 25px 0 0 25px;
+  }
+  .navbar--bg{
+    background: $yellow;
+  }
+  .navbar__logo{
+    margin: 2.5rem auto 0 auto;
+    height: 2.81rem;
+    width: auto;
+  }
+  .navbar__logout{
+    margin: 0 auto;
+    color:#262b41;
+    height: 1.8rem;
+    cursor: pointer;
+  
+  }
+  .menu{
+    list-style-type: none;
+    margin: 10rem 0;
+    text-align: center;
+   
+  }
+  
+  .menu__link{
+    @include center;
+    flex-direction: column;
+    margin: 2.6rem 0px;
+    color:#262b41;
+    padding: 0;
+
+  }
+  .menu__link a{
+    text-decoration: none;
+    color:black;
+  }
+  .icon{
+    font-size: 1.8rem;
+    height: 1.8rem;
+    padding: 0;
+    width: auto;
+    cursor: pointer;
+  }
+  .icon:hover{
+    font-size: 2.5rem;
+    height: 2.8rem;
+  }
+
+  .menuBtn{
+    display: none;
+  }
+  .navbar__mobile{
+    display: none;
+  }
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    overflow: auto;
+    width: 0;
+    height: 100vh;
+    background: $yellow;
+    border-radius: 25px 0 0 25px;
+    z-index: 6000;
+  }
+  .sidebar__close{
+    display: none;
+    margin: 5rem 50px 15px 40rem; 
+    font-size: 5rem;
+    position: fixed;
+    cursor: pointer;
+  }
+  /*Mobile navbar*/
+  @include mQ(720px){
+    .navbar{
+      display: flex;
+      flex-direction: row;
+      align-items: space-around;
+      position: fixed;
+      height: 15rem;
+      width: 90rem;
+      border-radius: 25px 25px 0 0 ;
+      z-index: 5000;
+    }
+    .menu{
+      display: none;
+    }
+    .mobile__menu{
+      list-style-type: none;
+      margin-top: 5rem;
+      text-align: center;
+     
+    }
+    .navbar__logout{
+      display: none;
+    }
+    .icon{
+      height: 25px;
+      font-size: 25px;
+      cursor: pointer;
+
+    }
+    .icon:hover{
+      height: 25px;
+      font-size: 25px;
+    }
+    .mobile__logout{
+      margin: 100px auto;
+      color:#262b41;
+      height: 25px;
+      width: 25px;
+      cursor: pointer;
+    
+    }
+    .navbar__logo{
+      display: flex;
+      height: 50%;
+
+    }
+    .navbar__mobile{
+      display: flex;
+      height: 100%;
+      width: 20rem;
+      margin: auto 2% auto 0;
+    }
+    .menuBtn{
+      display: flex;
+      height: 100%;
+      width: 20rem;
+      margin-left: 2%;
+    }
+    .menuBtn__icon{
+      font-size: 5rem;
+      margin: auto 4%;
+      cursor: pointer;
+    }
+    .navbar__not{
+      font-size: 5rem;
+      margin: auto 0px;
+    }
+    .navbar__avatar{
+      height: 10rem;
+      width: auto;
+      margin: auto 1% auto 3%;
+    }
+    .mobile__user{
+      display: flex;
+    }
+  }
